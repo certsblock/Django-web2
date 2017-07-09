@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <meta name="description" content="Build apps that issue and verify blockchain-based certificates for academic credentials, professional certifications, workforce development, and civic records.">
+    <meta name="author" content="Blockcerts">
+    <meta charset="utf-8">
+    <meta property="og:title" content="Blockchain Certificates" />
+    <meta property="og:description" content="Build apps that issue and verify blockchain-based certificates for academic credentials, professional certifications, workforce development, and civic records." />
+    <meta property="og:url" content="http://blockcerts.org/" />
+    <meta property="og:site_name" content="Blockcerts" />
+    <meta property="article:tag" content="Blockchain Certificates" />
+    <meta property="og:image" content="/assets/img/pictures/blockcerts.png" />
+
+    <link rel='shortcut icon' href='../assets/img/icons/favicon.ico' type='image/x-icon' />
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <script src="../assets/js/main.js" defer></script>
+
+    <title>Quick Start - Blockcerts : The Open Initiative for Blockchain Certificates</title>
+
+    <!--
+    Thanks for checking out the source. If you're looking to host rendered
+    Blockchain Certificates on your own site, here's all you need to do.
+    -->
+    <!-- Step 1: Include the web components polyfill for older browsers. -->
+    <script src="../components/webcomponentsjs/webcomponents-lite.min.js"></script>
+
+    <!-- Step 2: Import whichever web components you'd like to use. -->
+    <!-- This is for <blockchain-certificate> -->
+    <link rel="import" href="../components/blockchain-certificate/blockchain-certificate.html">
+    <!-- This is for <validate-certificate> -->
+    <link rel="import" href="../components/blockchain-certificate/validate-certificate.html">
+
+    <!-- Step 3: Use those elements in the body of your HTML. (See below, on web-component.html) -->
+
+    <script>
+      var on = "font-weight: bold; font-family: monospace; color: #33b17c;"
+      var off = "font-weight: bold; font-family: monospace; color: #082650;"
+      var text = "font-weight: normal, font-family: sans-serif; color: inherit;"
+      var logo = "%c▓▓▓▓%c░░%c▓%c░░%c▓▓▓▓\n"
+               + "%c░░░░░░░░░░░░░\n"
+               + "%c▓%c░░%c▓▓▓▓▓▓▓%c░░%c▓"+"%c       ___ _    ___   ___ _  __           _      \n"
+               + "%c░░░░░░░░░░░░░" +       "%c      | _ ) |  / _ \\ / __| |/ /__ ___ _ _| |_ ___\n"
+               + "%c▓▓%c░░%c▓%c░░%c▓▓▓▓▓▓"+"%c      | _ \\ |_| (_) | (__| ' </ _/ -_) '_|  _(_-<\n"
+               + "%c░░░░░░░░░░░░░"+        "%c      |___/____\\___/ \\___|_|\\_\\__\\___|_|  \\__/__/\n"
+               + "%c▓▓▓▓▓▓▓▓▓▓%c░░%c▓\n"
+               + "%c░░░░░░░░░░░░░\n"
+               + "%c▓▓▓▓▓▓▓%c░░%c▓%c░░%c▓\n"
+      logo += "\n%cThanks for checking out the code! There's plenty more to see at http://github.com/blockchain-certificates. We'd love to have you contribute! ❤️"
+
+      console.log(logo, on, off, on, off, on, off, on, off, on, off, on, off, off, off, on, off, on, off, on, off, off, off, on, off, on, off, on, off, on, off, on, text);
+    </script>
+  </head>
+  <body>
+    <main class="page_wrapper">
+      <nav data-menu-index="01" class="menu menu--01 js-menu">
+        <div class="menu__container">
+          <button type="button" class="menu__closer js-close-menu">close</button>
+          <div class="menu__box">
+            <ul class="menu__list">
+              <li class="menu__item active"><a href="../index.html" class="menu__link">Home</a></li>
+              <li class="menu__item"><a href="index.html" class="menu__link">Guide</a></li>
+              <li class="menu__item"><a href="../app/about.html" class="menu__link">About</a></li>
+              <li class="menu__item"><a href="https://github.com/blockchain-certificates" class="menu__link">Github</a></li>
+            </ul>
+            <ul class="social">
+              <li class="social__item social__item--left_margin"><a href="https://twitter.com/Blockcerts" title="Say hello in Twitter!" class="social__link social__link--twitter"></a></li>
+              <li class="social__item social__item--left_margin"><a href="https://www.facebook.com/blockcerts/" title="Say hello in Facebook!" class="social__link social__link--facebook"></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    
+      <div class="inner-page" style="min-height: 125px; background-color: #062451">
+    
+
+        <nav class="header header--01">
+          <div class="container header__container">
+            <div class="header__left_box"><a href="../index.html" title="Home" class="header__logo_box"><img src="../assets/img/etc/blockcerts.png" alt="Learning Machine" class="header__logo_img"></a></div>
+
+            <div class="header__right_box">
+              <ul class="header__menu_list header__item--desktop">
+                <li class="header__menu_item"><a href="../index.html" class="header__menu_link header__menu_link--white">Home</a></li>
+                <li class="header__menu_item"><a href="index.html" class="header__menu_link header__menu_link--white">Guide</a></li>
+                <li class="header__menu_item"><a href="../app/about.html" class="header__menu_link header__menu_link--white">About</a></li>
+                <li class="header__menu_item"><a href="https://github.com/blockchain-certificates" class="header__menu_link header__menu_link--white"><img src="../assets/img/icons/github.png" class="cover__img--16" style="width: 18px; top: -2px; position: relative; margin-right: 2px;">&nbsp;Github</a></li>
+              </ul>
+              <button type="button" data-menu-index="01" class="header__burger_button js-open-menu header__item--mobile"></button>
+
+            </div>
+          </div>
+        </nav>
+
+
+
+        
+
+      </div>
+    </div>
+
+
+
+    <div class="about about--03">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-12">
+        
+
+        <div class="guide-sidebar">
+          <h6>Introduction</h6>
+          <ul>
+            <li ><a href="index.html">Introduction</a></li>
+            <li ><a href="faq.html">FAQ</a></li>
+            <li class="active"><a href="quick-start.html">Quick Start</a></li>
+            <li ><a href="recipient_experience.html">Recipient Experience</a></li>
+            <li ><a href="standard.html">Standards Alignment</a></li>
+            <li ><a href="roadmap.html">Roadmap</a></li>
+          </ul>
+        </div>
+        
+
+      </div>
+      <div class="col-lg-9 col-md-9 col-sm-12 guide-content">
+        <h2 id="quick-start">Quick Start</h2>
+
+<h3 id="viewing-and-verifying-certificates">Viewing and verifying certificates</h3>
+
+<p>The easiest way for developers to get familiar with Blockchain Certificates is to clone the <a href="https://github.com/blockchain-certificates/cert-web-component">cert-web-component</a> repo and perform the steps in the README to launch. After this, you will be able to view and verify sample certificates locally.</p>
+
+<p>Other tools for viewing and verifying certificates include:</p>
+<ul>
+  <li><a href="https://github.com/blockchain-certificates/cert-verifier-js">cert-verifier-js</a>: Javascript library for Blockcerts verification that can be used in a Node.js app or a browser</li>
+  <li><a href="https://github.com/blockchain-certificates/cert-verifier">cert-verifier</a>: Python library for Blockcerts verification</li>
+  <li><a href="https://github.com/blockchain-certificates/cert-viewer">cert-viewer</a>: Python Flask app for viewing and verifying Blockcerts</li>
+</ul>
+
+<h3 id="issuing-certificates-end-to-end">Issuing certificates end-to-end</h3>
+
+<p><img src="../assets/img/pictures/issuing_process.png" alt="" /></p>
+
+<p>You can create, issue, and view your own certificates in test modes, which doesn’t require spending Bitcoin. We highly recommend trying this process in test mode before issuing certificates on the live Bitcoin blockchain.</p>
+
+<p>The full process is:</p>
+
+<ul>
+  <li>First you need certificates to sign and issue. You can either:
+    <ul>
+      <li>Use the sample unsigned certificate available in cert-issuer (skip to the next step if so)</li>
+      <li>Create your own unsigned certificates <a href="https://github.com/blockchain-certificates/cert-tools">cert-tools</a> and copy these to the ‘data/unsigned_certificates’ input directory of cert-issuer</li>
+    </ul>
+  </li>
+  <li>Run the <a href="https://github.com/blockchain-certificates/cert-issuer">cert-issuer</a> quick start steps</li>
+  <li>Copy the blockchain certificates you issued out of the docker container to a local directory
+    <div class="highlighter-rouge"><pre class="highlight"><code>docker cp &lt;docker-container-id&gt;:/etc/cert-issuer/data/blockchain_certificates/&lt;your-certificate-guid&gt;.json &lt;path_to_local_dir&gt;
+</code></pre>
+    </div>
+  </li>
+  <li>View your certificates in a browser
+    <ul>
+      <li>Javascript web component <a href="https://github.com/blockchain-certificates/cert-web-component">cert-web-component</a>: copy your certificates into  <code class="highlighter-rouge">&lt;cert-web-component-home&gt;</code></li>
+      <li>Python Flask app <a href="https://github.com/blockchain-certificates/cert-viewer">cert-viewer</a>: copy your certificates into <code class="highlighter-rouge">&lt;cert-viewer-home&gt;/cert_data</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Each of our github repositories has detailed information; start with the README.md for each.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <footer class="footer footer--04">
+        <div class="footer__main_box--04">
+          <div class="container footer__container"><a href="../index.html" class="footer__logo_box footer__logo_box--04"><img src="../assets/img/etc/blockcerts.png" class="footer__logo"></a>
+            <ul class="footer__nav footer__nav--04">
+              <li class="footer__nav__item footer__nav__item--04"><a href="../index.html" class="footer__nav__link footer__nav__link--04">Home</a></li>
+              <li class="footer__nav__item footer__nav__item--04"><a href="index.html" class="footer__nav__link footer__nav__link--04">Guide</a></li>
+              <li class="footer__nav__item footer__nav__item--04"><a href="../app/about.html" class="footer__nav__link footer__nav__link--04">About</a></li>
+              <li class="footer__nav__item footer__nav__item--04"><a href="https://github.com/blockchain-certificates" class="footer__nav__link footer__nav__link--04">Github</a></li>
+            </ul>
+            <ul class="social footer__social--04 footer__social_box">
+              <li class="social__item social__item--left_margin"><a href="https://twitter.com/Blockcerts" title="Say hello in Twitter!" class="social__link social__link--twitter"></a></li>
+              <li class="social__item social__item--left_margin"><a href="https://www.facebook.com/blockcerts/" title="Say hello in Facebook!" class="social__link social__link--facebook"></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__description_box--04">
+          <div class="container footer__container"><span class="footer__description footer__description--04">The Open Standard for Blockchain Certificates</span><span class="footer__copyright footer__copyright--04"><a href="https://opensource.org/licenses/MIT">The MIT License (MIT)</a></span></div>
+        </div>
+      </footer>
+
+
+
+    </main>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-1694379-18', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
+  <div class="js-overlay js-close-navigation js-close-menu overlay"></div>
+</html>
